@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam Cheng (鄭博修) | R&D Assistant Manager & Cloud Solutions Architect</title>
-  <meta name="description" content="Personal CV & Portfolio of Adam Cheng - R&D Assistant Manager, Cloud Solutions Architect, and Technical Program Manager with 18+ years in distributed cloud platforms and IAM.">
+  <meta name="description" content="Personal CV & Portfolio of Adam Cheng - R&D Assistant Manager, Cloud Solutions Architect, and Technical Program Manager with 18+ years in distributed cloud systems, IAM, and enterprise platforms.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
       --bg: #090d16;
       --bg-surface: #0f172a;
       --bg-card: rgba(30, 41, 59, 0.7);
-      --bg-card-hover: rgba(51, 65, 85, 0.8);
+      --bg-card-hover: rgba(51, 65, 85, 0.85);
       --border: rgba(148, 163, 184, 0.12);
-      --border-accent: rgba(14, 165, 233, 0.3);
+      --border-accent: rgba(14, 165, 233, 0.35);
       --text-main: #f1f5f9;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
@@ -54,22 +54,68 @@
       pointer-events: none;
       z-index: 0;
       background: 
-        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.07) 0%, transparent 40%),
-        radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.06) 0%, transparent 45%);
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.07) 0%, transparent 45%);
     }
 
     /* Container */
     .container {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 40px 24px 80px;
       position: relative;
       z-index: 1;
     }
 
+    /* Navigation Bar */
+    nav.top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    .nav-brand {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .nav-brand-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
     /* Header / Hero */
     header.hero {
-      padding: 40px 0 50px;
+      padding: 20px 0 45px;
       border-bottom: 1px solid var(--border);
       display: flex;
       flex-direction: column;
@@ -163,7 +209,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .btn {
@@ -200,6 +246,18 @@
     .btn-secondary:hover {
       background: rgba(51, 65, 85, 0.9);
       border-color: rgba(148, 163, 184, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .btn-download {
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--accent);
+      border: 1px solid var(--tag-border);
+    }
+
+    .btn-download:hover {
+      background: rgba(14, 165, 233, 0.2);
+      border-color: var(--accent);
       transform: translateY(-1px);
     }
 
@@ -333,7 +391,7 @@
     .platform-cards {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
     .platform-card {
@@ -361,7 +419,7 @@
     }
 
     .platform-name {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #ffffff;
       display: flex;
@@ -369,8 +427,9 @@
       gap: 8px;
     }
 
-    .platform-role {
-      font-size: 0.85rem;
+    .platform-meta-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--accent);
       background: var(--tag-bg);
@@ -380,7 +439,7 @@
     }
 
     .platform-desc {
-      font-size: 0.93rem;
+      font-size: 0.94rem;
       color: #cbd5e1;
       line-height: 1.6;
     }
@@ -390,15 +449,15 @@
       padding-left: 0;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 7px;
     }
 
     .platform-bullets li {
       position: relative;
-      padding-left: 18px;
-      font-size: 0.9rem;
+      padding-left: 20px;
+      font-size: 0.91rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .platform-bullets li::before {
@@ -422,10 +481,10 @@
 
     .tech-pill {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       padding: 3px 8px;
       border-radius: 4px;
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(15, 23, 42, 0.7);
       border: 1px solid var(--border);
       color: #cbd5e1;
     }
@@ -550,7 +609,13 @@
       color: var(--text-dim);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
+    }
+
+    .footer-downloads {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
     }
 
     .footer-links {
@@ -572,8 +637,9 @@
     @media (max-width: 768px) {
       h1.hero-name { font-size: 2.2rem; }
       .container { padding: 24px 16px 60px; }
-      .hero-actions { width: 100%; }
+      .hero-actions { width: 100%; flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
+      nav.top-nav { flex-direction: column; align-items: flex-start; gap: 12px; }
     }
   </style>
 </head>
@@ -582,6 +648,21 @@
 
   <div class="container">
     
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+      <a href="#" class="nav-brand">
+        <span class="nav-brand-dot"></span>
+        <span>Adam Cheng • Portfolio</span>
+      </a>
+      <div class="nav-links">
+        <a href="#projects">Platforms</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#experience">Experience</a>
+        <a href="Adam_Cheng_Resume.pdf" download style="color: var(--accent); font-weight: 600;">PDF Resume ↓</a>
+        <a href="Adam_Cheng_Resume.docx" download style="color: var(--accent); font-weight: 600;">Word DOCX ↓</a>
+      </div>
+    </nav>
+
     <!-- Hero Header -->
     <header class="hero">
       <div class="badge-status">
@@ -605,7 +686,7 @@
         </div>
         <div class="hero-meta-item">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918"/></svg>
-          <span>Canadian Citizen (Dual Language Fluency)</span>
+          <span>Canadian Citizen (Native / Full Bilingual Fluency)</span>
         </div>
         <div class="hero-meta-item">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
@@ -613,14 +694,23 @@
         </div>
       </div>
 
+      <!-- Action Buttons with Direct Resume Downloads -->
       <div class="hero-actions">
-        <a href="mailto:acheng0514@gmail.com" class="btn btn-primary">
+        <a href="Adam_Cheng_Resume.pdf" download class="btn btn-primary">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.5V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+          Download Resume (PDF)
+        </a>
+        <a href="Adam_Cheng_Resume.docx" download class="btn btn-download">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          Download Word (DOCX)
+        </a>
+        <a href="mailto:acheng0514@gmail.com" class="btn btn-secondary">
           <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-          Contact Me (acheng0514@gmail.com)
+          Contact Me
         </a>
         <a href="https://github.com/forkadam" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          GitHub Profile
+          GitHub
         </a>
       </div>
     </header>
@@ -655,12 +745,12 @@
       <div class="summary-box">
         Accomplished <strong>R&D Assistant Manager, Cloud Solutions Architect, and Technical Program Manager</strong> with over 18 years of software engineering expertise, including 12+ years at QNAP Systems spearheading global cloud infrastructure, core identity platforms, and enterprise administration systems.
         <br><br>
-        Proven track record leading multi-disciplinary engineering teams to architect, deploy, and scale high-concurrency systems—including centralized Identity & Access Management (<strong>Account Center</strong>), multi-tenant enterprise organizational administration (<strong>Organization Center</strong>), microservices governance portals (<strong>AMP</strong>), and automated cross-cloud telemetry pipelines. Combines rigorous backend engineering with formal design education from <strong>Art Center College of Design</strong> to deliver high-availability, developer-centric, and user-intuitive enterprise software solutions.
+        Proven track record leading multi-disciplinary engineering teams to architect, deploy, and scale high-concurrency systems—including centralized Identity & Access Management (<strong>Account Center</strong>), multi-tenant enterprise organizational administration (<strong>Organization Center</strong>), microservices governance portals (<strong>AMP</strong>), and automated cross-cloud telemetry pipelines. Pioneer in developing AI-augmented engineering workflows (Claude Code skills & MCP tooling), combining deep distributed systems architecture with formal design training from <strong>Art Center College of Design</strong> to deliver high-availability, developer-centric, and user-intuitive enterprise software solutions.
       </div>
     </section>
 
     <!-- Architecture Specialties -->
-    <section>
+    <section id="architecture">
       <div class="section-header">
         <h2 class="section-title">
           <span class="section-icon">◈</span> Core Architecture Specialties
@@ -669,136 +759,200 @@
       <div class="specialties-grid">
         <div class="specialty-card">
           <div class="specialty-icon">🔐</div>
-          <div class="specialty-title">Enterprise Identity & Access (IAM)</div>
+          <div class="specialty-title">Enterprise Identity & Security (IAM / PSIRT)</div>
           <div class="specialty-desc">
-            OAuth 2.0 & OpenID Connect (OIDC) token infrastructure, Single Sign-On (SSO), hierarchical RBAC/ABAC models, API gateway authorization, and proactive security vulnerability mitigation.
+            OAuth 2.0 (Device Code Flow), SAML SSO, OIDC, Multi-factor auth (TOTP/Push/SMS), WeChat Login, Global & China dual deployments, and end-to-end PSIRT vulnerability remediation (BOLA, XSS, CORS, MFA fatigue).
           </div>
         </div>
         <div class="specialty-card">
           <div class="specialty-icon">🏢</div>
           <div class="specialty-title">Multi-Tenant Systems & Fleet Governance</div>
           <div class="specialty-desc">
-            Multi-tiered organization trees, tenant domain isolation, granular policy delegation, and edge device allocation for large-scale enterprise hardware fleets.
+            Multi-tiered organization trees, tenant domain isolation, granular RBAC delegation, and edge device allocation for large-scale enterprise hardware fleets.
           </div>
         </div>
         <div class="specialty-card">
-          <div class="specialty-icon">⚙️</div>
-          <div class="specialty-title">Microservices & Backend Governance</div>
+          <div class="specialty-icon">⚡</div>
+          <div class="specialty-title">Distributed Backend & Stream Processing</div>
           <div class="specialty-desc">
-            Distributed backend systems with Python (Django, Tornado), Go, Node.js, and Java. Centralized administrative hubs (AMP) reducing cross-team support overhead by 40%.
+            High-throughput event streaming via Redis Streams, active-standby forwarders with distributed locks, async Python Tornado/Fastify, and Celery task queues.
           </div>
         </div>
         <div class="specialty-card">
-          <div class="specialty-icon">📊</div>
-          <div class="specialty-title">Cross-Cloud Data & Telemetry Pipelines</div>
+          <div class="specialty-icon">🤖</div>
+          <div class="specialty-title">AI Developer Tooling & DevOps Platform</div>
           <div class="specialty-desc">
-            Automated ETL orchestration moving multi-terabyte access logs from AWS Athena (S3) into Google BigQuery, feeding executive Looker Studio intelligence dashboards.
+            Custom Claude Code skills & MCP integrations (Jira, Confluence, GitLab, Grafana, MongoDB), automated unit testing & OpenSpec docs (`qnap-sdd`), and K8s Kustomize automation (`k8s-scaffold`).
           </div>
         </div>
       </div>
     </section>
 
     <!-- Flagship Enterprise Platforms -->
-    <section>
+    <section id="projects">
       <div class="section-header">
         <h2 class="section-title">
-          <span class="section-icon">⬡</span> Flagship Enterprise Platforms (QNAP Systems)
+          <span class="section-icon">⬡</span> Flagship Enterprise Platforms & Projects
         </h2>
       </div>
       <div class="platform-cards">
         
-        <!-- Account Center -->
+        <!-- 1. Account Center -->
         <div class="platform-card">
           <div class="platform-card-header">
             <div class="platform-name">
-              <span>Account Center — Global Identity Gateway</span>
+              <span>1. Account Center — Global Identity Platform & Micro-Frontend Rewrite</span>
             </div>
-            <div class="platform-role">Principal Architect & Lead</div>
+            <div class="platform-meta-badge">2023-08 → Present • ~2,030 / 2,216 commits across 6 repos</div>
           </div>
           <div class="platform-desc">
-            The core authentication and authorization engine for all QNAP global services, serving millions of NAS device owners, enterprise tenants, and external partner integrations.
+            QNAP's centralized identity core for the myQNAPcloud ID ecosystem. Serves millions of accounts across separate Global and China region deployments.
           </div>
           <ul class="platform-bullets">
-            <li><strong>Token Infrastructure:</strong> Engineered standardized OAuth 2.0 / OIDC token issuance, validation, and introspection protocols powering seamless Single Sign-On (SSO) across myQNAPcloud, Organization Center, and License Server.</li>
-            <li><strong>Resilience & Security Hardening:</strong> Led security audits, rate-limiting layers, and distributed token caching, sustaining <strong>99.99% service availability</strong> against web vulnerabilities.</li>
+            <li><strong>Full Identity Suite:</strong> Engineered sign-in, sign-up, 2-step verification (TOTP, SMS, email, mobile push), OAuth 2.0 provider with Device Code Flow, SAML SSO, and WeChat / WeChat Mini-Program authentication flows.</li>
+            <li><strong>Modern Micro-Frontend Architecture:</strong> Re-engineered legacy auth using React 19 + React Compiler, Webpack 5 Module Federation, React Router 7, Zustand, TanStack Query, i18next (22+ languages), and Vitest.</li>
+            <li><strong>Backend Engine & Concurrency:</strong> Fastify 5 (Node ESM), MongoDB, Redis session stores, and Python Celery workers on RabbitMQ. Deployed on multi-arch Docker, Kubernetes, and AWS CloudFront/S3 via GitLab CI.</li>
+            <li><strong>PSIRT Security Ownership:</strong> Handled end-to-end security vulnerability reports from triage to production verification, successfully remediating BOLA, open redirect, DOM XSS, CORS misconfigurations, and MFA push fatigue.</li>
           </ul>
           <div class="tech-stack-row">
-            <span class="tech-pill">OAuth 2.0</span>
-            <span class="tech-pill">OpenID Connect</span>
-            <span class="tech-pill">Python (Tornado)</span>
-            <span class="tech-pill">PostgreSQL</span>
-            <span class="tech-pill">Redis</span>
+            <span class="tech-pill">React 19</span>
+            <span class="tech-pill">Module Federation</span>
+            <span class="tech-pill">Fastify 5</span>
+            <span class="tech-pill">OAuth 2.0 / SAML</span>
+            <span class="tech-pill">Redis Sessions</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">RabbitMQ</span>
+            <span class="tech-pill">Kubernetes</span>
+          </div>
+        </div>
+
+        <!-- 2. Organization Center -->
+        <div class="platform-card">
+          <div class="platform-card-header">
+            <div class="platform-name">
+              <span>2. Organization Center — B2B Multi-Tenant Enterprise Portal</span>
+            </div>
+            <div class="platform-meta-badge">2020-07 → Present • 1,354 / 1,401 commits (FE + BE)</div>
+          </div>
+          <div class="platform-desc">
+            Comprehensive organization and device fleet management portal for business customers, managing companies, members, groups, physical sites, invitations, SSO, and webhooks.
+          </div>
+          <ul class="platform-bullets">
+            <li><strong>Frontend Architecture:</strong> React, Vite, TanStack Query, i18next, Chart.js, and dual Google Maps + Baidu Maps geolocation visualization for global site management.</li>
+            <li><strong>Backend for Frontend (BFF) & Core Services:</strong> Express BFF layer (handling Redis sessions, CSRF protection) backed by Python 3.14 Tornado async backend, Motor (async MongoDB), Redis, Celery, GeoIP2, and Prometheus metrics.</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Vite</span>
+            <span class="tech-pill">Express BFF</span>
+            <span class="tech-pill">Python 3.14</span>
+            <span class="tech-pill">Tornado</span>
+            <span class="tech-pill">Motor (Async Mongo)</span>
+            <span class="tech-pill">Prometheus</span>
+            <span class="tech-pill">AWS S3</span>
+          </div>
+        </div>
+
+        <!-- 3. License Server -->
+        <div class="platform-card">
+          <div class="platform-card-header">
+            <div class="platform-name">
+              <span>3. License Server & License Center</span>
+            </div>
+            <div class="platform-meta-badge">2022-01 → Present • 262 / 328 commits</div>
+          </div>
+          <div class="platform-desc">
+            Issues and activates software licenses for worldwide QNAP NAS devices, managing multi-seat licenses, product keys, organization-restricted licensing, and activation emails.
+          </div>
+          <ul class="platform-bullets">
+            <li><strong>Reliability & Concurrency:</strong> Engineered concurrency fixes in multi-seat seat-recovery, resolved critical BOLA vulnerabilities, and implemented China-CDN mail delivery.</li>
+            <li><strong>Cryptographic Entitlement:</strong> ECDSA cryptographic signature validation, aiomysql, uv package manager, and strict quality gates (pytest, ruff, mypy, bandit, OpenSpec).</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Python / Tornado</span>
+            <span class="tech-pill">aiomysql</span>
+            <span class="tech-pill">Motor</span>
+            <span class="tech-pill">ECDSA / Cryptography</span>
+            <span class="tech-pill">OpenSpec</span>
+            <span class="tech-pill">uv</span>
+          </div>
+        </div>
+
+        <!-- 4. AMP & AMP Admin Panel -->
+        <div class="platform-card">
+          <div class="platform-card-header">
+            <div class="platform-name">
+              <span>4. Application Management Platform (AMP) & Internal Admin Panel</span>
+            </div>
+            <div class="platform-meta-badge">2015 → Present • Core Backend & Modern Admin Hub</div>
+          </div>
+          <div class="platform-desc">
+            The core myQNAPcloud backend powering user accounts, device registration, and application lifecycle, alongside a brand-new internal operations hub.
+          </div>
+          <ul class="platform-bullets">
+            <li><strong>Progressive Dual-Runtime Migration:</strong> Architected side-by-side execution of Python 2.7 and Python 3.13 behind Nginx, enabling seamless, zero-downtime microservice migration.</li>
+            <li><strong>Modern Admin Panel (2025–2026):</strong> Built auto-generated CRUD management portal using Refine, React, TypeScript, Vite, shadcn/ui, Tailwind, and Microsoft SSO (MSAL / Azure AD) with fine-grained route and menu permissions.</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Refine</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">shadcn/ui</span>
+            <span class="tech-pill">Azure AD (MSAL)</span>
+            <span class="tech-pill">Python 3.13 / 2.7 Dual</span>
             <span class="tech-pill">Nginx</span>
           </div>
         </div>
 
-        <!-- Organization Center -->
+        <!-- 5. Distributed Backend Services -->
         <div class="platform-card">
           <div class="platform-card-header">
             <div class="platform-name">
-              <span>Organization Center — B2B Multi-Tenant Fleet Portal</span>
+              <span>5. Distributed Backend Services & Real-Time Event Streams</span>
             </div>
-            <div class="platform-role">System Architect & TPM</div>
-          </div>
-          <div class="platform-desc">
-            Enterprise web portal enabling corporate clients to manage multi-tiered organizational units, user groups, site hierarchies, and device allocations across distributed hardware fleets.
+            <div class="platform-meta-badge">Redis Streams • Webhooks • ETL • Business Metrics</div>
           </div>
           <ul class="platform-bullets">
-            <li><strong>Enterprise Multi-Tenancy:</strong> Designed granular permission delegation and data isolation, driving QNAP's strategic transition from consumer storage to enterprise multi-tenant fleet management.</li>
-            <li><strong>Edge-to-Cloud Integration:</strong> Standardized policy enforcement across heterogeneous NAS firmware (QTS/QuTS), mobile applications, and cloud services.</li>
+            <li><strong>Redis Event Handler (2024–2026):</strong> Transforms Redis key-expiry and deletion events into automated session and ZTNA record cleanup. Events flow via Redis Streams to horizontally scaling workers; features active-standby forwarder with Redis distributed lock.</li>
+            <li><strong>QC Webhook Mongo:</strong> Extensible webhook dispatching service for asynchronous QCloud event broadcasting.</li>
+            <li><strong>Cross-Cloud ETL Manager:</strong> Automated pipeline moving multi-TB telemetry access logs from AWS Athena into Google BigQuery, feeding executive Looker Studio dashboards (Django, Celery Beat, GCS).</li>
+            <li><strong>Business Metrics Pipeline (2025–2026):</strong> Aggregates live business metrics (orders, refunds, SSL licenses, usage) from MongoDB to Prometheus Pushgateway for Grafana monitoring.</li>
           </ul>
           <div class="tech-stack-row">
-            <span class="tech-pill">Multi-Tenancy</span>
-            <span class="tech-pill">Django</span>
-            <span class="tech-pill">React.js</span>
-            <span class="tech-pill">RBAC</span>
-            <span class="tech-pill">Docker</span>
-            <span class="tech-pill">PostgreSQL</span>
-          </div>
-        </div>
-
-        <!-- AMP -->
-        <div class="platform-card">
-          <div class="platform-card-header">
-            <div class="platform-name">
-              <span>AMP — Administrative Management Portal</span>
-            </div>
-            <div class="platform-role">Lead Architect</div>
-          </div>
-          <div class="platform-desc">
-            Unified internal operations and service administration hub for QNAP cloud applications, site reliability teams, and support engineering.
-          </div>
-          <ul class="platform-bullets">
-            <li><strong>Service Governance:</strong> Centralized CRUD operations, service maintenance, and audit logging across microservices, reducing cross-department support turnaround times by <strong>40%</strong>.</li>
-          </ul>
-          <div class="tech-stack-row">
-            <span class="tech-pill">Microservices Governance</span>
-            <span class="tech-pill">Python</span>
-            <span class="tech-pill">REST APIs</span>
-            <span class="tech-pill">React / AngularJS</span>
-            <span class="tech-pill">MongoDB</span>
-          </div>
-        </div>
-
-        <!-- Other QNAP Platforms -->
-        <div class="platform-card">
-          <div class="platform-card-header">
-            <div class="platform-name">
-              <span>Cloud Ecosystem, Licensing & Telemetry Services</span>
-            </div>
-            <div class="platform-role">R&D Assistant Manager</div>
-          </div>
-          <ul class="platform-bullets">
-            <li><strong>myQNAPcloud:</strong> Governed high-availability APIs powering remote monitoring, DDNS tunneling, and secure cryptographic asset sharing for worldwide NAS owners.</li>
-            <li><strong>License Server & Oscar Shop:</strong> Architected backend verification APIs validating cryptographic, hardware-bound licenses directly against device signatures.</li>
-            <li><strong>ETL Manager:</strong> Built automated scheduled data pipeline extracting access telemetry from AWS Athena (S3) into Google BigQuery, feeding executive Looker Studio BI reports.</li>
-          </ul>
-          <div class="tech-stack-row">
+            <span class="tech-pill">Redis Streams</span>
+            <span class="tech-pill">Redis Distributed Lock</span>
             <span class="tech-pill">AWS Athena</span>
             <span class="tech-pill">Google BigQuery</span>
-            <span class="tech-pill">Looker Studio</span>
-            <span class="tech-pill">Celery</span>
-            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Prometheus Pushgateway</span>
+            <span class="tech-pill">Grafana</span>
+          </div>
+        </div>
+
+        <!-- 6. DevOps & AI Tooling -->
+        <div class="platform-card">
+          <div class="platform-card-header">
+            <div class="platform-name">
+              <span>6. DevOps Platform Engineering & AI Developer Tooling (Claude Code / MCP)</span>
+            </div>
+            <div class="platform-meta-badge">Claude Code Skills • MCP • Bun CLI • Astro • K8s Kustomize</div>
+          </div>
+          <ul class="platform-bullets">
+            <li><strong>AI Developer Agent Ecosystem:</strong> Built custom Claude Code skills and Model Context Protocol (MCP) integrations across Jira, Confluence, GitLab, Grafana/Loki, and MongoDB.
+              <br>↳ <code>qnap-sdd</code>: Closes sub-tasks, runs test suites across touched repositories, writes as-built design docs (OpenSpec), and posts reports to Jira (259+ tests as of Sep 2026).
+              <br>↳ <code>qnap-psirt</code> / <code>psirt-triage</code>: Automated triage and reply workflows for security vulnerability reports.
+              <br>↳ <code>qnap-action-table-to-jira</code>: Converts Confluence specifications directly into Jira engineering tickets.</li>
+            <li><strong>CLI & Deployment Automation:</strong> Standardized Kubernetes Kustomize deployments (base + overlays); built <code>k8s-scaffold</code> CLI (Bun, TypeScript, Commander) for automated deployment generation.</li>
+            <li><strong>Service Status & Release Hub:</strong> Public service status platform (Astro, React, Better Auth with MS SSO, Drizzle ORM, PostgreSQL) and Release Helper dashboard integrated with GitLab API, release notes, and container scans.</li>
+            <li><strong>Database Modernization R&D (2026):</strong> Engineered data migration utility converting denormalized MongoDB documents into normalized PostgreSQL schemas with referential integrity, UUID generation, and dual-ID backward compatibility (async SQLAlchemy 2.0 + Tornado PoC).</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Claude Code Skills</span>
+            <span class="tech-pill">MCP Integrations</span>
+            <span class="tech-pill">Bun / TypeScript</span>
+            <span class="tech-pill">Astro</span>
+            <span class="tech-pill">Drizzle ORM</span>
+            <span class="tech-pill">Kustomize</span>
+            <span class="tech-pill">SQLAlchemy 2.0 Async</span>
           </div>
         </div>
 
@@ -806,7 +960,7 @@
     </section>
 
     <!-- Professional Timeline -->
-    <section>
+    <section id="experience">
       <div class="section-header">
         <h2 class="section-title">
           <span class="section-icon">⌛</span> Career Journey
@@ -821,7 +975,7 @@
           </div>
           <div class="timeline-company">QNAP Systems, Inc. (威聯通科技) • Taipei, Taiwan</div>
           <div class="timeline-desc">
-            Directing cloud platform engineering teams, setting architectural standards (ADRs), and driving end-to-end execution of identity, enterprise organization management, and telemetry systems.
+            Leading cloud backend engineering, platform architecture, security governance, and cross-functional technical delivery. Directing engineering teams, authoring ADRs, managing multi-tier cloud deployments, and pioneering AI-augmented engineering workflows.
           </div>
         </div>
 
@@ -832,7 +986,7 @@
           </div>
           <div class="timeline-company">CoreLogic, Inc. [NYSE: CLGX] • Irvine & Sacramento, CA, USA</div>
           <div class="timeline-desc">
-            Engineered enterprise property data frameworks, automated ETL normalization pipelines, and client-facing analytics applications (Quantum Data Analyzer & Data Prep) for Tier-1 financial institutions using Java, Struts 2, Spring, and MySQL.
+            Engineered enterprise property data frameworks, automated ETL normalization pipelines, and client-facing analytics applications (Quantum Data Analyzer & Data Prep) for Fortune 500 financial and mortgage institutions using Java, Struts 2, Spring, and MySQL.
           </div>
         </div>
 
@@ -876,15 +1030,15 @@
           <div class="info-card-title">🌐 Languages & Competencies</div>
           <div class="edu-row">
             <div class="edu-deg">Languages</div>
-            <div class="edu-sub">English (Bilingual / Full Fluency) • Mandarin (Native) • Taiwanese (Native)</div>
+            <div class="edu-sub">English (Native / Bilingual Fluency) • Mandarin (Native) • Taiwanese (Native)</div>
           </div>
           <div class="edu-row">
             <div class="edu-deg">Cloud & DevOps</div>
-            <div class="edu-sub">AWS (Athena, S3), Google Cloud (BigQuery, GCS), Docker, Kubernetes, Nginx, CI/CD</div>
+            <div class="edu-sub">Kubernetes, Docker, AWS (S3, Athena, CloudFront), GCP (BigQuery), Nginx, GitLab CI</div>
           </div>
           <div class="edu-row">
-            <div class="edu-deg">Core Backend</div>
-            <div class="edu-sub">Python (Django, Tornado), Go, Node.js, Java, PostgreSQL, MySQL, MongoDB, Redis</div>
+            <div class="edu-deg">Languages & Backends</div>
+            <div class="edu-sub">Python (Tornado, Django), TypeScript/Node (Fastify), Go, Java, PostgreSQL, MongoDB, Redis Streams</div>
           </div>
         </div>
 
@@ -894,6 +1048,14 @@
     <!-- Footer -->
     <footer>
       <div>Designed & Built by Adam Cheng (鄭博修) • Hosted on GitHub Pages</div>
+      <div class="footer-downloads">
+        <a href="Adam_Cheng_Resume.pdf" download class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
+          📄 Download Resume (PDF)
+        </a>
+        <a href="Adam_Cheng_Resume.docx" download class="btn btn-download" style="padding: 8px 16px; font-size: 0.85rem;">
+          📝 Download Resume (DOCX)
+        </a>
+      </div>
       <div class="footer-links">
         <a href="mailto:acheng0514@gmail.com">acheng0514@gmail.com</a>
         <a href="https://github.com/forkadam" target="_blank" rel="noopener noreferrer">github.com/forkadam</a>
